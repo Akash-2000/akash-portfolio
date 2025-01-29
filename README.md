@@ -1,6 +1,9 @@
 # My Portfolio
 
     - Installed tailwind css
+    - Installed daisy UI
+    - Installed react router dom
+    - create a single route
 
 # Pages
 
@@ -13,25 +16,22 @@
         - Project
         - Experience
         - Contact
+    - Path
+      - / - (root)
 
 # Research
 
-## scroll to sections
-
-````javascript
-import React, { useRef } from 'react';
-
-  // Create a reference for the "Contact Us" section
-  const contactUsRef = useRef(null);
-
-  // Function to scroll to the Contact Us section
-  const scrollToContact = () => {
-    contactUsRef.current.scrollIntoView({ behavior: 'smooth' });
-  };
-```
-## Scroll Event Handling in React
-
 ```javascript
+import React, { useRef } from "react";
+
+// Create a reference for the "Contact Us" section
+const contactUsRef = useRef(null);
+
+// Function to scroll to the Contact Us section
+const scrollToContact = () => {
+  contactUsRef.current.scrollIntoView({ behavior: "smooth" });
+};
+
 const [scrolled, setScrolled] = useState(false);
 
 useEffect(() => {
@@ -53,4 +53,4 @@ useEffect(() => {
     };
   }
 }, []); // Empty dependency array, meaning this runs once when the component mounts
-````
+```
