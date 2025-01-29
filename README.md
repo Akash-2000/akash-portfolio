@@ -4,6 +4,8 @@
     - Installed daisy UI
     - Installed react router dom
     - create a single route
+    - Addd the header and other hero sections
+    - added the scroll to section feature
 
 # Pages
 

@@ -1,2 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
+
+@theme {
+    --font-lexend: Lexend-Giga, sans-serif;
+}

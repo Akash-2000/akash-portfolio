@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Project = () => {
+const Contact = () => {
   return (
     <div className="hero bg-base-200 min-h-screen">
     <div className="hero-content text-center">
@@ -17,4 +17,4 @@ const Project = () => {
   )
 }
 
-export default Project
+export default Contact
