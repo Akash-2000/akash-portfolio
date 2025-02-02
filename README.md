@@ -6,6 +6,7 @@
     - create a single route
     - Addd the header and other hero sections
     - added the scroll to section feature
+    - Added hero section title
 
 # Pages
 

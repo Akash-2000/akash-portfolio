@@ -30,7 +30,7 @@ const NavData = [
 
 const Navbar = ({handleNavClick}) => {
   return (
-  <div className="navbar bg-base-100 p-6 px-7 sticky top-0">
+  <div className="navbar bg-base-100 p-6 px-7  pl-[85px] sticky top-0">
       <div className="flex-1">
         <a className="btn btn-ghost text-2xl font-lexend">AKASH</a>
       </div>
