@@ -1,11 +1,33 @@
 import React from 'react'
+import { GoArrowRight } from "react-icons/go";
+import { FaSquareGithub } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+import { FaRegFileAlt } from "react-icons/fa";
 import { BANNER_IMAGE } from '../constant'
+
+const socialMediaLinks = [
+  {
+    label:"github",
+    icon: <FaSquareGithub/>,
+    url:"https://react-icons.github.io/react-icons/search/#q=file"
+  },
+  {
+    label:"linkedin",
+    icon:<FaLinkedin/>,
+    url:"https://react-icons.github.io/react-icons/search/#q=file"
+  },
+  {
+    label:"File",
+    icon:<FaRegFileAlt/>,
+    url:"https://react-icons.github.io/react-icons/search/#q=file"
+  }
+]
 
 const Home = () => {
   return (
-    <div className="hero  min-h-screen">
-    <div className="hero-content grid grid-flow-col grid-cols-12">
-    <div className="col-span-7 ">
+    <div className="hero min-h-screen">
+    <div className="hero-content  grid grid-flow-col grid-cols-12 ">
+    <div className="col-span-7 h-full content-start">
       {/*
        - My Name
        - bordered
@@ -18,14 +40,21 @@ const Home = () => {
       {/*My Position */}
       {/*Hook up lines */}
       {/*Social Media links */}
-      <p className="py-6">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-        quasi. In deleniti eaque aut repudiandae et a id nisi.
-      </p>
-      <button className="btn btn-primary">Get Started</button>
+      <div className='grid grid-cols-12 gap-3 mt-10'>
+      <button className="btn btn-primary col-span-3 rounded-full btn-lg btn-md">
+        <span>GET IN TOUCH</span><span className="font-bold text-2xl"><GoArrowRight/></span>
+      </button>
+      <div className='flex items-center justify-center col-span-4 gap-4'>
+        {socialMediaLinks?.map((link)=> 
+        <button className="btn btn-circle btn-lg border-white" key={link.label}>
+          <span className='p-3 text-xl'>{link.icon}</span>
+        </button>
+        )}
+      </div>
+      </div>
     </div>
-    <div className='col-span-5 bg-pink-400' >
-      <img src={BANNER_IMAGE}/>
+    <div className='col-span-5' >
+        <img src={BANNER_IMAGE}/>
     </div>
   </div>
 </div>

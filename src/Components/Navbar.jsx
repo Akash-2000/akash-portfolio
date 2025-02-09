@@ -1,4 +1,5 @@
 import React from 'react'
+import {useState, useEffect} from 'react'
 
 const NavData = [
   {
@@ -29,8 +30,29 @@ const NavData = [
 ]
 
 const Navbar = ({handleNavClick}) => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    // Ensure window is available (client-side only)
+    if (typeof window !== "undefined") {
+      const handleScroll = () => {
+        if (window.scrollY > 0) {
+          setScrolled(true);
+        } else {
+          setScrolled(false);
+        }
+      };
+
+      window.addEventListener("scroll", handleScroll);
+
+      // Cleanup event listener on unmount
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, []); // Empty dependency array, meaning this runs once when the component mounts
   return (
-  <div className="navbar bg-base-100 p-6 px-7  pl-[85px] sticky top-0">
+  <div className={`navbar ${scrolled?"bg-base-300":"bg-base-100"} p-5 px-7  pl-[85px] sticky top-0`}>
       <div className="flex-1">
         <a className="btn btn-ghost text-2xl font-lexend">AKASH</a>
       </div>

@@ -48,9 +48,6 @@ const Layout = () => {
     <div ref={aboutRef}>
         <About/>
     </div>
-    <div ref={aboutRef}>
-        <About/>
-    </div>
     <div ref={projectRef}>
         <Project/>
     </div>

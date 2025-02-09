@@ -7,6 +7,8 @@
     - Addd the header and other hero sections
     - added the scroll to section feature
     - Added hero section title
+    - worked on About me section using the grid
+    - currently work on the ruff view
 
 # Pages
 
