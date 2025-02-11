@@ -9,6 +9,7 @@
     - Added hero section title
     - worked on About me section using the grid
     - currently work on the ruff view
+    - Project carousel need to work
 
 # Pages
 

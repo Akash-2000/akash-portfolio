@@ -2,6 +2,7 @@ import React from 'react'
 import { BANNER_IMAGE } from '../constant'
 import { GoArrowRight } from "react-icons/go";
 import Stats from './Stats'
+import TitleComponent from './TitleComponent';
 
 const statConstants = [
   {
@@ -25,9 +26,7 @@ const About = () => {
       </div>
       <div className="col-span-7 h-full">
   <div className="grid gap-3">
-    <h3 className="text-xl tracking-widest w-[20%] text-center font-lexend bg-slate-500 p-1 rounded-md mb-2">
-      ABOUT ME
-    </h3>
+    <TitleComponent title={'ABOUT ME'}/>
     <h1 className="text-4xl mb-2 font-bold w-full">
       I AM AVAILABLE FOR <br />
       <span className="font-bold w-full text-blue-400">MERN STACK</span> PROJECTS
@@ -43,7 +42,7 @@ const About = () => {
 
     {/* Button with col-span-3 */}
     <div className="grid grid-cols-4">
-      <button className="btn btn-primary rounded-full btn-lg btn-md">
+      <button className="btn btn-primary rounded-full btn-lg btn-md mt-2">
         <span>GET IN TOUCH</span>
         <span className="font-bold text-2xl">
           <GoArrowRight />
